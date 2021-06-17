@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: vcu-video-lib
+Description: VCU Video V4l2 library
+Version: 1.0
+Cflags: -I${includedir}/
+Libs: -L${libdir} -lvcu_video
+Requires: libdrm libv4l2 libmediactl glib-2.0
