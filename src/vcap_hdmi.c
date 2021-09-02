@@ -195,7 +195,7 @@ int vcap_hdmi_set_media_ctrl(const struct vlib_vdev *vdev, struct vlib_config_da
 			memset(fmt_str, 0, sizeof(fmt_str));
 			if (pixel_fmt_str) {
 				media_set_fmt_str(fmt_str, media_scaler_entity, 1, pixel_fmt_str,
-						timings.bt.width, timings.bt.height);
+						cfg->width_in, cfg->height_in);
 			} else {
 				vlib_dbg("HDMI Rx: Scaler: Invalid input format\n");
 				return VLIB_ERROR_SET_FORMAT_FAILED;
@@ -216,7 +216,7 @@ int vcap_hdmi_set_media_ctrl(const struct vlib_vdev *vdev, struct vlib_config_da
 			memset(fmt_str, 0, sizeof (fmt_str));
 			if (pixel_fmt_str) {
 				media_set_fmt_str(fmt_str, scd_media_entity, 0, pixel_fmt_str,
-						width_in, height_in);
+						cfg->width_in, cfg->height_in);
 			} else {
 				vlib_dbg("HDMI-Rx: Invalid input format\n");
 				return VLIB_ERROR_SET_FORMAT_FAILED;
