@@ -2,7 +2,7 @@
  * Xilinx Controls Header
  *
  * Copyright (C) 2013-2015 Ideas on Board
- * Copyright (C) 2013-2021 Xilinx, Inc.
+ * Copyright (C) 2013-2022 Xilinx, Inc.
  *
  * Contacts: Hyun Kwon <hyun.kwon@xilinx.com>
  *           Laurent Pinchart <laurent.pinchart@ideasonboard.com>
