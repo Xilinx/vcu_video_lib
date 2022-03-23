@@ -32,6 +32,8 @@
 #define MEDIA_NV16_PIXEL_FMT	"UYVY"
 #define MEDIA_XV15_PIXEL_FMT	"VYYUYY10"
 #define MEDIA_XV20_PIXEL_FMT	"UYVY10"
+#define MEDIA_YU24_PIXEL_FMT	"VUY24"
+#define MEDIA_X403_PIXEL_FMT	"VUY10"
 
 
 char * media_get_pixel_fmt_from_fmt(int format)
@@ -42,8 +44,12 @@ char * media_get_pixel_fmt_from_fmt(int format)
 		return MEDIA_NV16_PIXEL_FMT;
 	} else if (XV15 == format) {
 		return MEDIA_XV15_PIXEL_FMT;
-	} else if (XV20== format) {
+	} else if (XV20 == format) {
 		return MEDIA_XV20_PIXEL_FMT;
+	} else if (YU24 == format) {
+		return MEDIA_YU24_PIXEL_FMT;
+	} else if (X403 == format) {
+		return MEDIA_X403_PIXEL_FMT;
 	}
 
 	return NULL;

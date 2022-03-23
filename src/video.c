@@ -235,6 +235,9 @@ char* vlib_drm_find_bus_id (vlib_driver_type driver_type) {
 		ret = glob("/sys/bus/platform/drivers/zynqmp-display/*display", 0, NULL, &pglob);
 	} else {
 		ret = glob("/sys/bus/platform/drivers/xlnx-mixer/*v_mix", 0, NULL, &pglob);
+		if(((ret != 0) || (pglob.gl_pathv[0] == NULL)) && (HDMI_Tx == driver_type)) {
+			return strdup("amba_pl@0:drm-pl-disp-drvhdmi_output_v_hdmi_tx_ss_0");
+		}
 	}
 	if (ret != 0) {
 		vlib_err("DRM device not found\n");

@@ -52,6 +52,8 @@ typedef enum {
     NV16,
     XV15,
     XV20,
+    YU24,
+    X403
 } vlib_format_type;
 
 typedef enum {
