@@ -1,5 +1,5 @@
 /*********************************************************************
- * Copyright (C) 2017-2021 Xilinx, Inc.
+ * Copyright (C) 2017-2022 Xilinx, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -40,6 +40,8 @@ const struct {
 	{ DRM_FORMAT_NV16, NV16 },
 	{ DRM_FORMAT_XV15, XV15 },
 	{ DRM_FORMAT_XV20, XV20 },
+	{ DRM_FORMAT_YUV444, YU24 },
+	{ DRM_FORMAT_X403, X403 },
 };
 
 unsigned int vlib_format_to_drm_format(vlib_format_type vlib_format) {
@@ -192,6 +194,9 @@ int drm_find_preferred_plane(struct drm_device *dev, unsigned int format,
 		vlib_err("Open DRM device %s failed: %s", dev->dri_card, strerror(errno));
 		return VLIB_ERROR_DRM_DEVICE_OPEN_FAIL;
 	}
+
+	/* To get primary planes while quering with drmModeGetPlaneResources */
+	drmSetClientCap(dev->fd, DRM_CLIENT_CAP_UNIVERSAL_PLANES, 1);
 
 	plane_resources = drmModeGetPlaneResources(dev->fd);
 	if (!plane_resources) {

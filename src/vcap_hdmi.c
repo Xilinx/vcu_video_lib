@@ -1,5 +1,5 @@
 /*********************************************************************
- * Copyright (C) 2017-2021 Xilinx, Inc.
+ * Copyright (C) 2017-2022 Xilinx, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -84,6 +84,7 @@ const struct {
 	{ "VYYUYY8", MEDIA_BUS_FMT_VYYUYY8_1X24},
 	{ "VYYUYY10", MEDIA_BUS_FMT_VYYUYY10_4X20},
 	{ "UYVY10", MEDIA_BUS_FMT_UYVY10_1X20},
+	{ "VUY10", MEDIA_BUS_FMT_VUY10_1X30},
 };
 
 const char *v4l2_subdev_pixelcode_to_string(enum v4l2_mbus_pixelcode code)

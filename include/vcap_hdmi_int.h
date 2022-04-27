@@ -1,5 +1,5 @@
 /*********************************************************************
- * Copyright (C) 2017-2021 Xilinx, Inc.
+ * Copyright (C) 2017-2022 Xilinx, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -30,6 +30,7 @@ extern "C"
 /* add support for new nv12 format as per the latest driver changes */
 #define MEDIA_BUS_FMT_VYYUYY8_1X24		0x2100
 #define MEDIA_BUS_FMT_VYYUYY10_4X20		0x2101
+#define MEDIA_BUS_FMT_VUY10_1X30		0x2102
 
 struct vlib_vdev;
 struct matchtable;

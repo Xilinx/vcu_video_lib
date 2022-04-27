@@ -1,5 +1,5 @@
 /*********************************************************************
- * Copyright (C) 2017-2021 Xilinx, Inc.
+ * Copyright (C) 2017-2022 Xilinx, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -52,6 +52,8 @@ typedef enum {
     NV16,
     XV15,
     XV20,
+    YU24,
+    X403
 } vlib_format_type;
 
 typedef enum {
