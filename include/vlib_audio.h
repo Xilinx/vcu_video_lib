@@ -35,7 +35,7 @@ extern "C"
 #define XLNXSNDI2S                  "xlnxi2ssndcard"
 #define XLNXSNDSDI                  "xlnxsdisndcard"
 #define XLNXSNDHDMI                 "xlnxhdmisndcard"
-#define XLNXSNDMONITOR              "monitor"
+#define XLNXSNDMONITOR              "mon"
 
 typedef enum {
     AUDIO_HDMI_IN,
