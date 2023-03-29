@@ -1,5 +1,6 @@
 /*********************************************************************
  * Copyright (C) 2017-2022 Xilinx, Inc.
+ * Copyright (C) 2022-2023 Advanced Micro Devices, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -34,7 +35,7 @@ extern "C"
 #define XLNXSNDI2S                  "xlnxi2ssndcard"
 #define XLNXSNDSDI                  "xlnxsdisndcard"
 #define XLNXSNDHDMI                 "xlnxhdmisndcard"
-#define XLNXSNDMONITOR              "monitor"
+#define XLNXSNDMONITOR              "mon"
 
 typedef enum {
     AUDIO_HDMI_IN,

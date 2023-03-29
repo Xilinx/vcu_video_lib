@@ -3,6 +3,7 @@
  *
  * Copyright (C) 2013-2015 Ideas on Board
  * Copyright (C) 2013-2022 Xilinx, Inc.
+ * Copyright (C) 2022-2023 Advanced Micro Devices, Inc.
  *
  * Contacts: Hyun Kwon <hyun.kwon@xilinx.com>
  *           Laurent Pinchart <laurent.pinchart@ideasonboard.com>
