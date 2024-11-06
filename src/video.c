@@ -1,6 +1,6 @@
 /*********************************************************************
  * Copyright (C) 2017-2022 Xilinx, Inc.
- * Copyright (C) 2022-2023 Advanced Micro Devices, Inc.
+ * Copyright (C) 2022-2024 Advanced Micro Devices, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -237,7 +237,7 @@ char* vlib_drm_find_bus_id (vlib_driver_type driver_type) {
 	} else {
 		ret = glob("/sys/bus/platform/drivers/xlnx-mixer/*v_mix", 0, NULL, &pglob);
 		if(((ret != 0) || (pglob.gl_pathv[0] == NULL)) && (HDMI_Tx == driver_type)) {
-			return strdup("amba_pl@0:drm-pl-disp-drvhdmi_output_v_hdmi_tx_ss_0");
+			return strdup("drm-pl-disp-drvhdmi_output_v_hdmi_tx_ss_0");
 		}
 	}
 	if (ret != 0) {
